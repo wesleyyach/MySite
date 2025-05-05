@@ -62,3 +62,21 @@ digitar();
 window.addEventListener("load", () => {
   document.getElementById("preloader").style.display = "none";
 });
+const botoesSom = document.querySelectorAll('.botao-som');
+
+const sons = {
+  click1: new Audio('/sounds/click.wav'),
+  click2: new Audio('/sounds/click2.mp3'),
+  click3: new Audio('/sounds/click3.wav'),
+  click4: new Audio('/sounds/fingerclick.wav'),
+};
+
+botoesSom.forEach(botao => {
+  botao.addEventListener('click', () => {
+    const somNome = botao.dataset.som; // Obtém o nome do som do atributo data-som
+    if (sons[somNome]) {
+      sons[somNome].currentTime = 0;
+      sons[somNome].play();
+    }
+  });
+});
