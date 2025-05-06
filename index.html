@@ -12,9 +12,27 @@
     />
   </head>
   <body>
+    <div class="progress-container">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+    
     <div id="preloader">
       <div class="spinner"></div>
     </div>
+
+    <button class="menu-toggle" id="menuToggle">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="menu-mobile" id="menuMobile">
+      <nav>
+        <a href="#sobre">Sobre</a>
+        <a href="#habilidades">Habilidades</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+
     <header>
       <h1 id="typing"></h1>
       <nav>
@@ -25,12 +43,16 @@
       </nav>
       <button id="toggle-theme">🌙 Modo Escuro</button>
     </header>
+
     <button id="btnTopo" title="Voltar ao topo">
       <i class="fas fa-arrow-up"></i>
     </button>
+
     <main>
-      <div id="particles-js"></div> 
-      <section id="sobre" class="fade-in">
+      <div id="particles-js"></div>
+      
+      <section id="sobre" class="fade-in parallax-section">
+        <div class="parallax-bg"></div>
         <h2>Sobre Mim</h2>
         <p>
           Entusiasta da tecnologia e estudante de Análise e Desenvolvimento de
@@ -107,24 +129,23 @@
           >
         </div>
       </section>
+
       <section id="contato" class="fade-in">
         <h2>Contato</h2>
-        <p><i class="fas fa-envelope"></i> wesleyyach@gmail.com</p>
-        <p>
+        <a href="mailto:wesleyyach@gmail.com" class="contact-card">
+          <i class="fas fa-envelope"></i>
+          <p>wesleyyach@gmail.com</p>
+        </a>
+        <a href="https://www.linkedin.com/in/wesley-albuquerque-7272892b7/" target="_blank" class="contact-card">
           <i class="fab fa-linkedin"></i>
-          <a
-            href="https://www.linkedin.com/in/wesley-albuquerque-7272892b7/"
-            target="_blank"
-            >linkedin.com/in/wesley-albuquerque-7272892b7</a
-          >
-        </p>
-        <p>
+          <p>linkedin.com/in/wesley-albuquerque-7272892b7</p>
+        </a>
+        <a href="https://github.com/wesleyyach" target="_blank" class="contact-card">
           <i class="fab fa-github"></i>
-          <a href="https://github.com/wesleyyach" target="_blank"
-            >github.com/wesleyyach</a
-          >
-        </p>
+          <p>github.com/wesleyyach</p>
+        </a>
       </section>
+
       <section id="diversao-sonora" class="fade-in">
         <h2>Diversão Sonora</h2>
         <div class="botoes-sonoros">
@@ -143,12 +164,14 @@
         </div>
       </section>
     </main>
+
     <footer>
       <p>
         &copy; 2025 Wesley de Albuquerque Filgueiras. Todos os direitos
         reservados.
       </p>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="/js/particles-config.js"></script>
     <script src="/js/script.js"></script>
