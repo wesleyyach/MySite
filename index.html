@@ -12,6 +12,11 @@
     />
   </head>
   <body>
+    <button id="toggle-theme" class="toggle-theme-btn">
+      <span class="icon-sun"><i class="fas fa-sun"></i></span>
+      <span class="icon-moon"><i class="fas fa-moon"></i></span>
+      <span class="switch-circle"></span>
+    </button>
     <div class="progress-container">
       <div class="progress-bar" id="progressBar"></div>
     </div>
@@ -20,38 +25,24 @@
       <div class="spinner"></div>
     </div>
 
-    <button class="menu-toggle" id="menuToggle">
-      <i class="fas fa-bars"></i>
-    </button>
-
-    <div class="menu-mobile" id="menuMobile">
-      <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
-      </nav>
-    </div>
-
-    <header>
-      <h1 id="typing"></h1>
-      <nav>
-        <a href="#sobre">Sobre</a>
-        <a href="#habilidades">Habilidades</a>
-        <a href="#projetos">Projetos</a>
-        <a href="#contato">Contato</a>
-      </nav>
-      <button id="toggle-theme">🌙 Modo Escuro</button>
-    </header>
-
-    <button id="btnTopo" title="Voltar ao topo">
-      <i class="fas fa-arrow-up"></i>
-    </button>
-
     <main>
       <div id="particles-js"></div>
       
-      <section id="sobre" class="fade-in parallax-section">
+      <!-- Seção de Apresentação -->
+      <section id="apresentacao">
+        <p class="apresentacao-sub">Opa! Meu nome é</p>
+        <h1 class="apresentacao-nome">Wesley de Albuquerque Filgueiras</h1>
+        <div class="apresentacao-icons">
+          <a href="https://github.com/wesleyyach" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.linkedin.com/in/wesley-albuquerque-7272892b7/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <div class="apresentacao-seta">
+          <i class="fas fa-chevron-down"></i>
+        </div>
+      </section>
+      <!-- Fim da seção de apresentação -->
+
+      <section id="sobre" class="slide-in-left parallax-section">
         <div class="parallax-bg"></div>
         <h2>Sobre Mim</h2>
         <p>
@@ -61,21 +52,27 @@
         </p>
       </section>
 
-      <section id="habilidades" class="fade-in">
+      <section id="habilidades" class="slide-in-right">
         <h2>Habilidades</h2>
         <ul>
-          <li><i class="fab fa-html5"></i>HTML</li>
-          <li><i class="fab fa-css3-alt"></i>CSS</li>
-          <li><i class="fab fa-js"></i>JavaScript</li>
-          <li><i class="fab fa-python"></i>Python</li>
-          <li><i class="fab fa-git-alt"></i>Git</li>
-          <li><i class="fab fa-github"></i>GitHub</li>
+          <li class="zoom-in"><i class="fab fa-html5"></i>HTML</li>
+          <li class="zoom-in"><i class="fab fa-css3-alt"></i>CSS</li>
+          <li class="zoom-in"><i class="fab fa-js"></i>JavaScript</li>
+          <li class="zoom-in"><i class="fab fa-python"></i>Python</li>
+          <li class="zoom-in"><i class="fab fa-git-alt"></i>Git</li>
+          <li class="zoom-in"><i class="fab fa-github"></i>GitHub</li>
         </ul>
       </section>
 
-      <section id="projetos" class="fade-in">
+      <section id="projetos" class="slide-in-left">
         <h2>Projetos</h2>
-        <div class="projeto">
+        <div class="projeto slide-in-up">
+          <div class="computer-frame">
+            <div class="computer-screen">
+              <img src="/img/tempero-nordeste.png" alt="Tempero do Nordeste" />
+            </div>
+            <div class="computer-keyboard"></div>
+          </div>
           <h3>Tempero do Nordeste</h3>
           <p>
             Um Site feito por mim e minha dupla, sobre culinária nordestina,
@@ -89,7 +86,13 @@
             >Ver no GitHub</a
           >
         </div>
-        <div class="projeto">
+        <div class="projeto slide-in-up">
+          <div class="computer-frame">
+            <div class="computer-screen">
+              <img src="/img/NactePreview.png" alt="Nactel Construções" />
+            </div>
+            <div class="computer-keyboard"></div>
+          </div>
           <h3>Nactel Construções</h3>
           <p>
             Meu primeiro site para uma empresa, feita apenas por mim e pegando
@@ -103,7 +106,13 @@
             >Ver no GitHub</a
           >
         </div>
-        <div class="projeto">
+        <div class="projeto slide-in-up">
+          <div class="computer-frame">
+            <div class="computer-screen">
+              <img src="/img/help-self.png" alt="Help Self" />
+            </div>
+            <div class="computer-keyboard"></div>
+          </div>
           <h3>Help Self</h3>
           <p>
             Meu primeiro site, projeto de faculdade (em grupo). Site sobre ajuda
@@ -114,7 +123,13 @@
             >Ver no GitHub</a
           >
         </div>
-        <div class="projeto">
+        <div class="projeto slide-in-up">
+          <div class="computer-frame">
+            <div class="computer-screen">
+              <img src="/img/PortifolioPreview.png" alt="My Portfolio" />
+            </div>
+            <div class="computer-keyboard"></div>
+          </div>
           <h3>My Portfolio</h3>
           <p>
             (ESTE SITE)<br />
@@ -130,17 +145,17 @@
         </div>
       </section>
 
-      <section id="contato" class="fade-in">
+      <section id="contato" class="slide-in-right">
         <h2>Contato</h2>
-        <a href="mailto:wesleyyach@gmail.com" class="contact-card">
+        <a href="mailto:wesleyyach@gmail.com" class="contact-card zoom-in">
           <i class="fas fa-envelope"></i>
           <p>wesleyyach@gmail.com</p>
         </a>
-        <a href="https://www.linkedin.com/in/wesley-albuquerque-7272892b7/" target="_blank" class="contact-card">
+        <a href="https://www.linkedin.com/in/wesley-albuquerque-7272892b7/" target="_blank" class="contact-card zoom-in">
           <i class="fab fa-linkedin"></i>
           <p>linkedin.com/in/wesley-albuquerque-7272892b7</p>
         </a>
-        <a href="https://github.com/wesleyyach" target="_blank" class="contact-card">
+        <a href="https://github.com/wesleyyach" target="_blank" class="contact-card zoom-in">
           <i class="fab fa-github"></i>
           <p>github.com/wesleyyach</p>
         </a>
@@ -165,15 +180,18 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="fade-in">
       <p>
         &copy; 2025 Wesley de Albuquerque Filgueiras. Todos os direitos
         reservados.
       </p>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script src="/js/particles-config.js"></script>
+    <button id="btnTopo" title="Voltar ao topo" style="display:none;">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="/js/starfield.js"></script>
     <script src="/js/script.js"></script>
   </body>
 </html>

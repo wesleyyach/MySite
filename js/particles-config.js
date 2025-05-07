@@ -1,62 +1,40 @@
 particlesJS('particles-js', {
   particles: {
     number: {
-      value: 100,
+      value: 60,
       density: {
         enable: true,
         value_area: 800
       }
     },
     color: {
-      value: ['#3b82f6', '#60a5fa', '#93c5fd', '#bfdbfe'] // Tons de azul
+      value: "#ffffff"
     },
     shape: {
-      type: ['circle', 'triangle'],
-      stroke: {
-        width: 0,
-        color: '#000000'
-      }
+      type: "circle"
     },
     opacity: {
-      value: 0.6,
-      random: true,
-      anim: {
-        enable: true,
-        speed: 1,
-        opacity_min: 0.1,
-        sync: false
-      }
+      value: 0.4,
+      random: true
     },
     size: {
-      value: 4,
-      random: true,
-      anim: {
-        enable: true,
-        speed: 2,
-        size_min: 0.1,
-        sync: false
-      }
+      value: 3,
+      random: true
     },
     line_linked: {
       enable: true,
       distance: 150,
-      color: '#3b82f6',
-      opacity: 0.4,
+      color: "#ffffff",
+      opacity: 0.18,
       width: 1
     },
     move: {
       enable: true,
-      speed: 3,
-      direction: 'none',
-      random: true,
+      speed: 1.1,
+      direction: "none",
+      random: false,
       straight: false,
-      out_mode: 'out',
-      bounce: false,
-      attract: {
-        enable: true,
-        rotateX: 600,
-        rotateY: 1200
-      }
+      out_mode: "out"
     }
   },
   interactivity: {
@@ -64,24 +42,17 @@ particlesJS('particles-js', {
     events: {
       onhover: {
         enable: true,
-        mode: 'bubble'
+        mode: 'repulse'
       },
       onclick: {
-        enable: true,
-        mode: 'push'
+        enable: false
       },
       resize: true
     },
     modes: {
-      bubble: {
-        distance: 200,
-        size: 6,
-        duration: 2,
-        opacity: 0.8,
-        speed: 3
-      },
-      push: {
-        particles_nb: 4
+      repulse: {
+        distance: 80,
+        duration: 0.4
       }
     }
   },
