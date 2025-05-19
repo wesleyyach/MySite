@@ -1254,10 +1254,7 @@ header nav a:hover {
   position: relative;
   box-shadow: 0 12px 32px 0 rgba(0,0,0,0.35), 0 1.5px 8px 0 rgba(0,0,0,0.10);
   border: 2.5px solid #22272e;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  overflow: visible;
+  display: block;
 }
 .computer-frame::before {
   content: '';
@@ -1295,6 +1292,10 @@ header nav a:hover {
   box-shadow: 0 2px 12px rgba(0,0,0,0.18) inset, 0 0.5px 2px #fff2 inset;
   border: 1.5px solid #444a55;
   margin-top: 12px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  display: block;
 }
 .computer-screen::after {
   content: '';
@@ -1314,16 +1315,20 @@ header nav a:hover {
   box-shadow: 0 0 0 1px #22272e;
 }
 .computer-keyboard {
-  width: 360px;
+  width: 340px;
   height: 28px;
   background: linear-gradient(160deg, #23272f 80%, #444 100%);
   margin: 0 auto;
   border-radius: 0 0 16px 16px;
   position: relative;
-  top: -8px;
+  top: 20px;
   box-shadow: 0 6px 18px rgba(0,0,0,0.25);
   border: 2.5px solid #22272e;
   z-index: 2;
+  margin-top: -20px;
+  margin-bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .computer-keyboard::before {
   content: '';
@@ -1527,4 +1532,16 @@ body.dark .computer-keyboard::after {
 .zoom-in.visible {
   opacity: 1;
   transform: scale(1);
+}
+
+/* Ajuste responsivo para telas menores */
+@media (max-width: 400px) {
+  .computer-frame {
+    width: 98vw;
+    min-width: 0;
+  }
+  .computer-keyboard {
+    width: 100vw;
+    min-width: 0;
+  }
 }
